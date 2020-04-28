@@ -126,7 +126,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node1" {
   catalog_name  = var.template_folder
   template_name = "c8-k8s-node-tmpl-a1"
   memory        = 2048
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 
@@ -160,7 +160,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node2" {
   catalog_name  = var.template_folder
   template_name = "c8-k8s-node-tmpl-a1"
   memory        = 2048
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 
@@ -194,7 +194,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node3" {
   catalog_name  = var.template_folder
   template_name = "c8-k8s-node-tmpl-a1"
   memory        = 2048
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 

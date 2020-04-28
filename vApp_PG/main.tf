@@ -24,7 +24,7 @@ resource "vcd_vapp_vm" "smpay-t-db-1" {
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
   memory        = 1024
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 
@@ -58,7 +58,7 @@ resource "vcd_vapp_vm" "smpay-t-pg-2" {
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
   memory        = 1024
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 
@@ -92,7 +92,7 @@ resource "vcd_vapp_vm" "smpay-t-pg-3" {
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
   memory        = 1024
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 
