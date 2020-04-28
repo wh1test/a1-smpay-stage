@@ -63,6 +63,5 @@ resource "vcd_vapp_vm" "smpay-t-gitlab-1" {
     name        = vcd_independent_disk.gitDisk1.name
     bus_number  = 1
     unit_number = 0
-    size_in_mb  = 20000
   }
 }
