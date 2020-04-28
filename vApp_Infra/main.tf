@@ -20,7 +20,7 @@ resource "vcd_vapp_org_network" "infra-network" {
 
 resource "vcd_independent_disk" "gitDisk1" {
   name         = "gitDisk1"
-  size         = "25000"
+  size         = "5000"
   bus_type     = "SCSI"
   bus_sub_type = "VirtualSCSI"
   storage_profile = "c01-cl02-Tier-2"
@@ -59,9 +59,9 @@ resource "vcd_vapp_vm" "smpay-t-gitlab-1" {
     # Other customization options to override the ones from template
   }
   
-  disk {
-    name        = vcd_independent_disk.gitDisk1.name
-    bus_number  = 1
-    unit_number = 0
-  }
+#  disk {
+#    name        = vcd_independent_disk.gitDisk1.name
+#    bus_number  = 1
+#    unit_number = 0
+#  }
 }
