@@ -50,6 +50,9 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-1" {
     auto_generate_password     = false
     # Other customization options to override the ones from template
   }
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "vcd_vapp_vm" "smpay-t-l7lb-2" {
@@ -59,7 +62,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-2" {
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
   memory        = 1024
-  cpus          = 2
+  cpus          = 1
   cpu_cores     = 1
   power_on      = true
 
