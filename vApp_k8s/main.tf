@@ -1,4 +1,5 @@
 provider "vcd" {
+  version = var.provider_version
   user  = var.vcd_user
   password  = var.vcd_pass
   org      = var.org

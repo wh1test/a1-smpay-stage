@@ -1,6 +1,12 @@
+variable "provider_version" {
+  type = string
+  default = "2.8.0"
+}
+
 variable "vcd_user" {
   type = string
 }
+
 variable "vcd_pass" {
   type = string
 }
