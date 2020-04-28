@@ -1,3 +1,7 @@
+#Link to terraform exe
+terraform
+terraform.exe
+
 # Local .terraform directories
 **/.terraform/*
 
