@@ -50,9 +50,6 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-1" {
     auto_generate_password     = false
     # Other customization options to override the ones from template
   }
-  lifecycle {
-    create_before_destroy = true
-  }
 }
 
 resource "vcd_vapp_vm" "smpay-t-l7lb-2" {
