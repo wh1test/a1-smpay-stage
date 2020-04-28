@@ -20,7 +20,7 @@ resource "vcd_vapp_org_network" "infra-network" {
 
 resource "vcd_independent_disk" "gitDisk1" {
   name         = "gitDisk1"
-  size         = "512"
+  size         = "25000"
   bus_type     = "SCSI"
   bus_sub_type = "VirtualSCSI"
   storage_profile = "c01-cl02-Tier-2"
