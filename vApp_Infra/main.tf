@@ -32,6 +32,7 @@ resource "vcd_vapp_vm" "smpay-t-gitlab-1" {
   computer_name = "smpay-t-gitlab-1"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-2"
   memory        = 4096
   cpus          = 2
   cpu_cores     = 1

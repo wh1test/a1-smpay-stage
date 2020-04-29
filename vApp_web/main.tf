@@ -24,6 +24,7 @@ resource "vcd_vapp_vm" "smpay-t-app-1" {
   computer_name = "smpay-t-app-1"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-1"
   memory        = 1024
   cpus          = 1
   cpu_cores     = 1
@@ -33,6 +34,7 @@ resource "vcd_vapp_vm" "smpay-t-app-1" {
     role    = "app"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -51,3 +53,40 @@ resource "vcd_vapp_vm" "smpay-t-app-1" {
     # Other customization options to override the ones from template
   }
 }
+
+resource "vcd_vapp_vm" "smpay-t-app-2" {
+  vapp_name     = "vApp_web"
+  name          = "smpay-t-app-2"
+  computer_name = "smpay-t-app-2"
+  catalog_name  = var.template_folder
+  template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-1"
+  memory        = 1024
+  cpus          = 1
+  cpu_cores     = 1
+  power_on      = true
+
+  metadata = {
+    role    = "app"
+    env     = "stage"
+    version = "1.0"
+    os  = "linux"
+  }
+
+  network {
+    type               = "org"
+    name               = vcd_vapp_org_network.dmz-network.org_network_name
+    ip_allocation_mode = "POOL"
+    ip                 = ""
+    is_primary         = true
+  }
+  
+  customization {
+    force                      = false
+    change_sid                 = false
+    allow_local_admin_password = false
+    auto_generate_password     = false
+    # Other customization options to override the ones from template
+  }
+}
+

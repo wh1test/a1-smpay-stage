@@ -24,6 +24,7 @@ resource "vcd_vapp_vm" "smpay-t-db-1" {
   computer_name = "smpay-t-pg-1"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-1"
   memory        = 2048
   cpus          = 1
   cpu_cores     = 1
@@ -92,6 +93,7 @@ resource "vcd_vapp_vm" "smpay-t-pg-3" {
   computer_name = "smpay-t-pg-3"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-1"
   memory        = 2048
   cpus          = 1
   cpu_cores     = 1

@@ -24,6 +24,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-1" {
   computer_name = "smpay-t-l7lb-1"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-2"
   memory        = 1024
   cpus          = 1
   cpu_cores     = 1
@@ -58,6 +59,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-2" {
   computer_name = "smpay-t-l7lb-2"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-2"
   memory        = 1024
   cpus          = 1
   cpu_cores     = 1
@@ -92,6 +94,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-3" {
   computer_name = "smpay-t-l7lb-3"
   catalog_name  = var.template_folder
   template_name = "c8-web-tmpl-a1"
+  storage_profile = "c01-cl02-Tier-2"
   memory        = 1024
   cpus          = 1
   cpu_cores     = 1
