@@ -373,6 +373,10 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node1" {
     auto_generate_password     = false
     # Other customization options to override the ones from template
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "vcd_vapp_vm" "smpay-t-k8s-node2" {
@@ -480,6 +484,10 @@ resource "vcd_vapp_vm" "smpay-t-gitlab-1" {
     auto_generate_password     = false
     # Other customization options to override the ones from template
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
   
  # disk {
  #   name        = vcd_independent_disk.gitDisk1.name
@@ -522,5 +530,9 @@ resource "vcd_vapp_vm" "smpay-t-pg-1" {
     allow_local_admin_password = false
     auto_generate_password     = false
     # Other customization options to override the ones from template
+  }
+  
+  lifecycle {
+    prevent_destroy = true
   }
 }
