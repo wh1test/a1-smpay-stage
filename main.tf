@@ -69,6 +69,7 @@ resource "vcd_vapp_vm" "smpay-t-gitlab-1" {
     role    = "git"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -111,6 +112,7 @@ resource "vcd_vapp_vm" "smpay-t-db-1" {
     role    = "db"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -145,6 +147,7 @@ resource "vcd_vapp_vm" "smpay-t-pg-2" {
     role    = "db"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -180,6 +183,7 @@ resource "vcd_vapp_vm" "smpay-t-pg-3" {
     role    = "db"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -216,6 +220,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-1" {
     role    = "l7lb"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -251,6 +256,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-2" {
     role    = "l7lb"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -286,6 +292,7 @@ resource "vcd_vapp_vm" "smpay-t-l7lb-3" {
     role    = "l7lb"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -393,6 +400,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-master1" {
     role    = "k8s"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -427,6 +435,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-master2" {
     role    = "k8s"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -461,6 +470,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-master3" {
     role    = "k8s"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -495,6 +505,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node1" {
     role    = "k8s"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -529,6 +540,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node2" {
     role    = "k8s"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
@@ -563,6 +575,7 @@ resource "vcd_vapp_vm" "smpay-t-k8s-node3" {
     role    = "k8s"
     env     = "stage"
     version = "1.0"
+    os  = "linux"
   }
 
   network {
